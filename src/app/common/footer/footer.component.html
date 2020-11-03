@@ -1,35 +1,60 @@
-<footer class="footer pb-6 pt-6 pt-md-8" [ngClass]="{'bg-primary text-white': isHome, 'footer_light': light}">
-  <div class="container">
-    <div *ngIf="!light" class="row">
-      <div class="col-sm-7">
-        <h2>Have a questions, talk to us.</h2>
-        <h5 class="mb-5 mb-md-7">We reply to everyone.</h5>
-      </div>
-      <div class="col-sm-5 pt-3 mb-5 mb-md-0">
-        <p class="small mb-1" [ngClass]="{'text-muted': !isHome, 'text-light': isHome}">FOR BUSINESS</p>
-        <p class="mb-4 pb-2 h5"><a [ngClass]="{'text-white': isHome, 'text-black': !isHome}" href="">info@example.com</a></p>
+<footer class="footer pb-6 pt-6 pt-md-8" [ngClass]="{ 'bg-primary text-white': isHome, footer_light: light }">
+    <div class="container">
+        <div *ngIf="!light" class="row">
+            <div class="col-sm-7">
+                <h2>¿Te gustaría personalizar, tu próxima plaquita?</h2>
+                <h3 class="mb-5 mb-md-7">¡Estamos listos!</h3>
+            </div>
+            <div class="col-sm-5 pt-3 mb-5 mb-md-0">
+                <p class="small mb-1" [ngClass]="{ 'text-muted': !isHome, 'text-light': isHome }">HAZ TU PEDIDO</p>
+                <p class="mb-4 pb-2 h5">
+                    <a
+                        [ngClass]="{ 'text-white': isHome, 'text-black': !isHome }"
+                        href="https://wa.me/message/LVRISXWDQTV6C1"
+                        target="_blank"
+                    >
+                        <fa-icon [icon]="faWhatsapp" [size]="'lg'"></fa-icon> Escríbenos
+                    </a>
+                </p>
 
-        <p class="small mb-1" [ngClass]="{'text-muted': !isHome, 'text-light': isHome}">SAY HI</p>
-        <p class="mb-4 h5"><a [ngClass]="{'text-white': isHome, 'text-black': !isHome}"
-                              href="">support.info@example.com</a></p>
-      </div>
+                <p class="small mb-1" [ngClass]="{ 'text-muted': !isHome, 'text-light': isHome }">TAMBIÉN DESDE</p>
+                <p class="mb-4 h5">
+                    <a
+                        [ngClass]="{ 'text-white': isHome, 'text-black': !isHome }"
+                        target="_blank"
+                        href="https://m.me/bmartinez.bl"
+                    >
+                        <fa-icon [icon]="faFacebookMessenger" [size]="'lg'"></fa-icon> Facebook
+                    </a>
+                </p>
+
+                <p class="small mb-1" [ngClass]="{ 'text-muted': !isHome, 'text-light': isHome }">SÍGUENOS</p>
+                <p class="mb-4 h5">
+                    <a [ngClass]="{ 'text-white': isHome, 'text-black': !isHome }" href="">
+                        <fa-icon [icon]="faInstagram" [size]="'lg'"></fa-icon> Instagram
+                    </a>
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-7 mb-3">
+                © Doglio México. {{ year }}, Con <fa-icon [icon]="faHeart" [size]="'sm'"></fa-icon> por
+                <a target="_blank" href="https://itia-digital.com" style="color: inherit;">ITIA DIGITAL</a>
+            </div>
+            <div class="col-md-5 mb-3 text-white">
+                <!--                <a class="mr-4" href="#" [ngClass]="{ 'text-white': isHome }">-->
+                <!--                    <fa-icon [icon]="faInstagram" [size]="'lg'"></fa-icon>-->
+                <!--                </a>-->
+                <!--                <a class="mr-4" href="#" [ngClass]="{ 'text-white': isHome }">-->
+                <!--                    <fa-icon [icon]="faBehance" [size]="'lg'"></fa-icon>-->
+                <!--                </a>-->
+                <!--                <a class="mr-4" href="#" [ngClass]="{ 'text-white': isHome }">-->
+                <!--                    <fa-icon [icon]="faDribbble" [size]="'lg'"></fa-icon>-->
+                <!--                </a>-->
+                <!--                <a class="mr-4" href="#" [ngClass]="{ 'text-white': isHome }">-->
+                <!--                    <fa-icon [icon]="faLinkedinIn" [size]="'lg'"></fa-icon>-->
+                <!--                </a>-->
+            </div>
+        </div>
     </div>
-    <div class="row">
-      <div class="col-md-7 mb-3">© Oblas. 2019 | Privacy Policy</div>
-      <div class="col-md-5 mb-3 text-white">
-        <a class="mr-4" href="#" [ngClass]="{'text-white': isHome}">
-          <fa-icon [icon]="faInstagram" [size]="'lg'"></fa-icon>
-        </a>
-        <a class="mr-4" href="#" [ngClass]="{'text-white': isHome}">
-          <fa-icon [icon]="faBehance" [size]="'lg'"></fa-icon>
-        </a>
-        <a class="mr-4" href="#" [ngClass]="{'text-white': isHome}">
-          <fa-icon [icon]="faDribbble" [size]="'lg'"></fa-icon>
-        </a>
-        <a class="mr-4" href="#" [ngClass]="{'text-white': isHome}">
-          <fa-icon [icon]="faLinkedinIn" [size]="'lg'"></fa-icon>
-        </a>
-      </div>
-    </div>
-  </div>
 </footer>

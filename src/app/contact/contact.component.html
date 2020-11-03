@@ -1,22 +1,47 @@
 <app-navbar [navbarColor]="'dark'"></app-navbar>
 <div class="d-flex flex-column min-vh-100">
-  <div class="contact">
-    <div class="container mt-8">
-      <div class="row">
-        <div class="col-lg-7">
-          <h1>Ready, Steady, Go</h1>
-          <h5 class="mb-6">We reply to everyone.</h5>
-          <app-contact-form [formDark]="true"></app-contact-form>
-        </div>
-        <div class="col-lg-4 ml-auto pt-3 mt-5 mt-lg-0">
-          <p class="small mb-1 text-light">FOR BUSINESS</p>
-          <p class="mb-4 pb-2 h5"><a class="text-white" href="">info@example.com</a></p>
+    <div class="contact">
+        <div class="container mt-8">
+            <div class="row">
+                <div class="col-lg-7">
+                    <h1>Preparados, Listos, Vamos!</h1>
+                    <h5 class="mb-6">¡Te contestamos muy rápido!.</h5>
+                    <app-contact-form [formDark]="true"></app-contact-form>
+                </div>
+                <div class="col-lg-4 ml-auto pt-3 mt-5 mt-lg-0">
+                    <p class="small mb-1" [ngClass]="{ 'text-muted': !isHome, 'text-light': isHome }">
+                        HAZ TU PEDIDO
+                    </p>
+                    <p class="mb-4 pb-2 h5">
+                        <a
+                            [ngClass]="{ 'text-white': isHome, 'text-black': !isHome }"
+                            href="https://wa.me/message/LVRISXWDQTV6C1"
+                            target="_blank"
+                        >
+                            <fa-icon [icon]="faWhatsapp" [size]="'lg'"></fa-icon> Escríbenos
+                        </a>
+                    </p>
 
-          <p class="small mb-1 text-light">SAY HI</p>
-          <p class="mb-4 h5"><a class="text-white" href="">support.info@example.com</a></p>
+                    <p class="small mb-1" [ngClass]="{ 'text-muted': !isHome, 'text-light': isHome }">TAMBIÉN DESDE</p>
+                    <p class="mb-4 h5">
+                        <a
+                            [ngClass]="{ 'text-white': isHome, 'text-black': !isHome }"
+                            target="_blank"
+                            href="https://m.me/bmartinez.bl"
+                        >
+                            <fa-icon [icon]="faFacebookMessenger" [size]="'lg'"></fa-icon> Facebook
+                        </a>
+                    </p>
+
+                    <p class="small mb-1" [ngClass]="{ 'text-muted': !isHome, 'text-light': isHome }">SÍGUENOS</p>
+                    <p class="mb-4 h5">
+                        <a [ngClass]="{ 'text-white': isHome, 'text-black': !isHome }" href="">
+                            <fa-icon [icon]="faInstagram" [size]="'lg'"></fa-icon> Instagram
+                        </a>
+                    </p>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
-  </div>
-  <app-footer [light]="true"></app-footer>
+    <app-footer [light]="true"></app-footer>
 </div>
